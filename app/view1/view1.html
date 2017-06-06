@@ -1,0 +1,33 @@
+<p>this is movies</p>
+
+<form style="width: 500px">
+	<label>Title</label>
+	<input type="text" class="form-control" ng-model="newMovie.title">
+	<label>Director</label>
+	<input type="text" class="form-control" ng-model="newMovie.director.name">
+	<button type="button" ng-click="addMovie()" class="btn btn-success">Add Movie</button>
+</form>
+
+<div class="container">
+	<h2>Movies</h2>
+	<div class="table-responsive">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>
+						Title
+					</th>
+					<th>
+						Director
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="movie in movies">
+					<td>{{movie.title}}</td>
+					<td>{{movie.director.name}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
